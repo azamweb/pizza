@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+@mixin media($w) {
+  @media (max-width: $w) {
+    @content;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+  background-color: #222;
+}
+html::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: #000000;
+  border-radius: 15px;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: "Urbanist", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: #222;
+}
+/* CONTAINER SYTLES */
+.container {
+  width: 100%;
+  max-width: 540px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+.header {
+  margin-top: 20px;
+  .header-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .header-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+    span {
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      outline: none;
+      padding-left: 30px;
+      border-radius: 20px;
+      border: 1px solid #6b6b6b;
+    }
+  }
+  .header-top-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .header-top-items-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      &__img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 10px;
+      }
+      &__text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        color: #222;
+      }
+    }
+
+  }
+}
+
+
+main {  
+  margin-bottom: 100px;
+  h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  .main-cards {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .main-cards-item {
+      &__img {
+        width: 100%;
+        height: 155px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        object-fit: cover;
+      }
+      &__title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #222;
+        margin-bottom: 7px;
+      }
+      &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #222;
+        margin-bottom: 15px;
+      }
+      &__btn {
+        width: 100%;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+
+      }
+    }
+  }
+}
+
+
+
+.footer {
+  width: 100%;
+  position: relative;
+  .footer-top {
+      background-color: #000;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 50;
+      .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        .footer-items {
+          &__img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+}
+
+
+
+
+
+
+
+@import "./cotegory.scss";
+@import "./burgers.scss";
+
+
+
