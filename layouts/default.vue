@@ -10,7 +10,7 @@
                 </NuxtLink>
                 <div class="header-search">
                     <span>
-                        <img class="header-search-" src="../assets/images/search.svg" alt="search">
+                        <img class="header-search-img" src="../assets/images/search.svg" alt="search">
                     </span>
                     <input type="text" placeholder="searching">
                 </div>
